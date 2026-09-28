@@ -111,3 +111,7 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
 }
 
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Логотипы-ссылки: монохром, при наведении темнеют */
+.logo-link { display: inline-flex; color: inherit; transition: color .15s; }
+.logo-link:hover { color: var(--navy); }

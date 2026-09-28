@@ -44,7 +44,7 @@ export default function Home() {
           <p className={s.heroLead}>Захожу в компанию, перестраиваю процессы вместе с&nbsp;вашей командой и довожу до роста прибыли. Работаю за&nbsp;фикс и процент от&nbsp;результата.</p>
           <div className={s.heroCtas}>
             <a href="#form" className="btn btn-primary">Обсудить задачу</a>
-            <a href="#cases" className="link">Посмотреть кейсы</a>
+            <a href="#cases" className="btn btn-outline">Посмотреть кейсы</a>
           </div>
         </div>
         <figure className={s.portrait}>
@@ -193,6 +193,9 @@ export default function Home() {
             <figure className={s.aboutPhoto}>
               <Pic name="gallery-5" widths={[720, 1100]} sizes="(max-width: 900px) 90vw, 520px" alt="Михаил Попов" />
             </figure>
+          </div>
+          <div className={s.path}>
+            <h3 className={s.pathTitle}>Путь</h3>
             <ol className={s.timeline}>
               {TIMELINE.filter((t) => shown(t.co + t.f)).map((t) => <li key={t.co + t.f}><b>{t.co}</b><span>{t.f}</span></li>)}
             </ol>
