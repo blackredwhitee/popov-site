@@ -19,6 +19,11 @@
   --on-navy-2: #B7C0CC;
   --on-navy-3: #8C9AAE;
   --error: #F0A48F;
+  /* Основная кнопка и крупные цифры — отдельные токены, чтобы палитры могли их перекрасить */
+  --btn: var(--navy);
+  --btn-hover: var(--navy-hover);
+  --btn-text: #fff;
+  --num: var(--navy);
   --serif: var(--font-serif), Georgia, serif;
   --sans: var(--font-golos), system-ui, sans-serif;
   --pad-x: clamp(20px, 5vw, 64px);
@@ -50,11 +55,11 @@ img { display: block; max-width: 100%; }
 .h2 { margin: 0; font: 400 clamp(30px, 3.2vw, 42px)/1.15 var(--serif); letter-spacing: -.015em; text-wrap: balance; }
 .h2-form { margin: 0; font: 300 clamp(28px, 3.2vw, 42px)/1.2 var(--serif); letter-spacing: -.015em; color: #fff; text-wrap: balance; }
 .lead { margin: 0; font: 400 17px/1.55 var(--sans); color: var(--ink-2); text-wrap: pretty; }
-.big-num { font: 400 clamp(36px, 3.6vw, 46px)/1 var(--serif); }
+.big-num { font: 400 clamp(36px, 3.6vw, 46px)/1 var(--serif); color: var(--num); }
 .eyebrow { font: 500 16px/1.4 var(--sans); color: var(--gold-dark); }
 .note { margin: 0; font: 400 13px/1.4 var(--sans); color: var(--ink-4); }
 .band-navy .note { color: var(--on-navy-3); }
-.notebox { margin: 0 0 24px; padding: 14px 18px; background: #fff; border: 1px solid var(--line); font: 400 14px/1.5 var(--sans); color: var(--ink-3); }
+.notebox { margin: 0 0 24px; padding: 14px 18px; background: var(--white); border: 1px solid var(--line); font: 400 14px/1.5 var(--sans); color: var(--ink-3); }
 
 .sec-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px; }
 .sec-head > p { max-width: 420px; }
@@ -65,8 +70,8 @@ img { display: block; max-width: 100%; }
   padding: 20px 34px; border: none; cursor: pointer; text-align: center;
   font: 500 16px/1 var(--sans); transition: background-color .15s;
 }
-.btn-primary { background: var(--navy); color: #fff; }
-.btn-primary:hover { background: var(--navy-hover); color: #fff; }
+.btn-primary { background: var(--btn); color: var(--btn-text); }
+.btn-primary:hover { background: var(--btn-hover); color: var(--btn-text); }
 .btn-gold { background: var(--gold); color: var(--navy); font-weight: 600; }
 .btn-gold:hover { background: var(--gold-hover); color: var(--navy); }
 .btn-outline { background: transparent; border: 1px solid var(--navy); color: var(--navy); }
@@ -115,3 +120,33 @@ html.js [data-reveal].in { opacity: 1; transform: none; }
 /* Логотипы-ссылки: монохром, при наведении темнеют */
 .logo-link { display: inline-flex; color: inherit; transition: color .15s; }
 .logo-link:hover { color: var(--navy); }
+
+/* ——— Палитры на выбор (временно: переключатель внизу страницы) ——— */
+html[data-palette="warm"] {
+  --paper: #F6F0E6; --white: #FFFCF7; --line: #DDD3C3; --line-soft: #EAE2D5;
+  --gold: #E8B04A; --gold-hover: #F0C166; --gold-dark: #B8482A;
+  --btn: #C9532F; --btn-hover: #B4472A; --btn-text: #fff; --num: #B8482A;
+}
+html[data-palette="green"] {
+  --navy: #173A2F; --navy-hover: #1F4A3C; --navy-deep: #102A22;
+  --paper: #F3EFE4; --white: #FBF9F3; --line: #D8D2C2; --line-soft: #E6E0D2;
+  --gold: #E0A548; --gold-hover: #EBB663; --gold-dark: #A9651A;
+  --ink-1: #22332C; --ink-2: #34463E; --ink-3: #4A5B53; --ink-4: #66756E; --muted: #56655E;
+  --on-navy: #CFDCD4; --on-navy-2: #B3C4BA; --on-navy-3: #8FA398;
+  --btn: #173A2F; --btn-hover: #1F4A3C; --btn-text: #fff; --num: #173A2F;
+}
+html[data-palette="contrast"] {
+  --navy: #111418; --navy-hover: #262B31; --navy-deep: #0A0C0F;
+  --paper: #F4F4F1; --white: #FFFFFF; --line: #DCDCD7; --line-soft: #E8E8E4;
+  --gold: #FF5A1F; --gold-hover: #FF7440; --gold-dark: #D2400B;
+  --ink-1: #1F2328; --ink-2: #3A3F46; --ink-3: #50565E; --ink-4: #6E747B; --muted: #5C6168;
+  --on-navy: #D5D7DA; --on-navy-2: #B5B9BE; --on-navy-3: #8B9097;
+  --btn: #FF5A1F; --btn-hover: #FF7440; --btn-text: #111418; --num: #111418;
+}
+
+.palette-switch { position: fixed; left: 16px; bottom: 16px; z-index: 36; display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px; background: #fff; border: 1px solid #D6D1C6; box-shadow: 0 6px 24px rgba(0,0,0,.12); font: 500 13px/1 var(--sans); color: #13243B; max-width: calc(100vw - 32px); }
+.palette-switch > span { padding: 0 6px; color: #6B7584; }
+.palette-switch button { display: inline-flex; align-items: center; gap: 6px; padding: 8px 10px; border: 1px solid transparent; background: none; font: inherit; color: inherit; cursor: pointer; }
+.palette-switch button[aria-pressed="true"] { border-color: #13243B; }
+.palette-switch i { width: 16px; height: 16px; border-radius: 50%; border: 1px solid rgba(0,0,0,.1); }
+@media (max-width: 899px) { .palette-switch { bottom: 92px; } }

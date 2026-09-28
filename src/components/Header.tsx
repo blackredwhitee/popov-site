@@ -42,7 +42,7 @@ export default function Header() {
       </header>
       <div className={s.mbar}>
         <button type="button" className="btn btn-primary" onClick={openLead}>Обсудить задачу</button>
-        <a href={TELEGRAM} className={s.tg} aria-label="Telegram" target="_blank" rel="noopener"><TgIcon color="#13243B" /></a>
+        <a href={TELEGRAM} className={s.tg} aria-label="Telegram" target="_blank" rel="noopener"><TgIcon color="currentColor" /></a>
       </div>
     </>
   );

@@ -15,7 +15,7 @@ textarea.input { height: auto; padding: 14px 16px; line-height: 1.5; resize: ver
 .chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--navy); }
 .consent { display: flex; gap: 12px; align-items: flex-start; font: 400 14px/1.5 var(--sans); color: var(--on-navy); cursor: pointer; }
 .consent input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--gold); flex: none; }
-.consent a { color: var(--gold); border-bottom: 1px solid rgba(200,161,90,.5); }
+.consent a { color: var(--gold); border-bottom: 1px solid color-mix(in srgb, var(--gold) 50%, transparent); }
 .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .submit { grid-column: 1 / -1; justify-self: start; padding: 20px 40px; }
 .submit:disabled { opacity: .7; cursor: default; }

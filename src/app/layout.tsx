@@ -3,6 +3,7 @@ import { Golos_Text, Literata } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LeadModal from "@/components/LeadModal";
+import PaletteSwitcher from "@/components/PaletteSwitcher";
 import Reveal from "@/components/Reveal";
 import { SITE_NAME, SITE_URL } from "@/lib/config";
 import "./globals.css";
@@ -22,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ru" suppressHydrationWarning className={`${serif.variable} ${golos.variable}`}>
       <head>
-        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+        <script dangerouslySetInnerHTML={{ __html: "var d=document.documentElement;d.classList.add('js');try{var p=new URLSearchParams(location.search).get('palette');if(p!==null)localStorage.setItem('popov_palette',p);p=localStorage.getItem('popov_palette');if(p)d.dataset.palette=p}catch(e){}" }} />
       </head>
       <body>
         <Header />
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <LeadModal />
         <Reveal />
+        <PaletteSwitcher />
       </body>
     </html>
   );

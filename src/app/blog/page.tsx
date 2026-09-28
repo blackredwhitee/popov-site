@@ -20,7 +20,7 @@ export default function BlogPage() {
           <h1 className="h1">Блог</h1>
           <div className={s.blogHeadRight}>
             <p className="lead">Где бизнес теряет деньги и как их вернуть. Статьи, выступления и интервью.</p>
-            <a href={TELEGRAM} className="btn btn-outline" target="_blank" rel="noopener"><TgIcon color="#13243B" size={18} />Telegram-канал</a>
+            <a href={TELEGRAM} className="btn btn-outline" target="_blank" rel="noopener"><TgIcon color="currentColor" size={18} />Telegram-канал</a>
           </div>
         </div>
       </section>

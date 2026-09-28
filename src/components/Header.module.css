@@ -15,7 +15,7 @@
 .menu a:last-child { border-bottom: none; }
 .mbar { display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 12px 16px 16px; background: var(--paper); gap: 10px; border-top: 1px solid var(--line); }
 .mbar .btn { flex: 1; height: 52px; padding: 0; }
-.tg { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--navy); flex: none; }
+.tg { color: var(--navy); width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--navy); flex: none; }
 @media (max-width: 899px) {
   .nav { display: none; }
   .burger { display: flex; }
