@@ -24,3 +24,8 @@ export const SHOW_NOTES = process.env.NEXT_PUBLIC_HIDE_NOTES !== "1";
 export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 /** Путь к файлу из public/ с учётом basePath (для <img>, CSS url, скачивания). */
 export const asset = (p: string) => `${BASE_PATH}${p}`;
+
+/** Черновой текст — содержит [квадратные скобки]. */
+export const isDraft = (t: string) => t.includes("[");
+/** Показывать элемент: черновики видны только в режиме пометок. */
+export const shown = (t: string) => SHOW_NOTES || !isDraft(t);

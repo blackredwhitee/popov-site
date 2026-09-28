@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FAQ, METHOD, METHOD_CENTER } from "@/data/home";
+import { METHOD, METHOD_CENTER } from "@/data/home";
 import s from "../home.module.css";
 
 /** Позиции узлов: радиус 40%, старт сверху, шаг 360/7°. */
@@ -36,11 +36,11 @@ export function MethodScheme({ note }: { note?: React.ReactNode }) {
   );
 }
 
-export function Faq() {
+export function Faq({ items }: { items: { q: string; a: string }[] }) {
   const [open, setOpen] = useState(-1);
   return (
     <div className="rule">
-      {FAQ.map((f, i) => (
+      {items.map((f, i) => (
         <div key={f.q} className={s.faqItem}>
           <h3>
             <button type="button" className={s.faqBtn} aria-expanded={open === i} aria-controls={`faq-${i}`} onClick={() => setOpen(open === i ? -1 : i)}>

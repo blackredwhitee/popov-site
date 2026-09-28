@@ -18,9 +18,6 @@ export const MEDIA_STATS = {
   top: PUBLICATIONS.filter((p) => p.tier === "ТОП СМИ").length,
 };
 
-/** Стена логотипов. TODO: монохромные SVG-логотипы изданий. */
-export const OUTLETS = ["РБК", "«Ведомости»", "«Коммерсантъ»", "«Российская газета»", "Forbes", "«Известия»", "«Эксперт»", "«Аргументы и факты»", "TechCrunch", "Microsoft"];
-
 /** Карусель: порядок и короткие подписи — п. 3.2 дополнения. Ключ — фрагмент ссылки. */
 const FEATURED_ORDER: { key: string; pub: string; title: string; type: string }[] = [
   { key: "news.microsoft.com", pub: "Microsoft", title: "Настоящий предприниматель грустит по наступлении пятницы", type: "Интервью" },

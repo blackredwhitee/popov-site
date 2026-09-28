@@ -19,7 +19,7 @@
   --on-navy-2: #B7C0CC;
   --on-navy-3: #8C9AAE;
   --error: #F0A48F;
-  --serif: var(--font-playfair), Georgia, serif;
+  --serif: var(--font-serif), Georgia, serif;
   --sans: var(--font-golos), system-ui, sans-serif;
   --pad-x: clamp(20px, 5vw, 64px);
   --sec-y: clamp(64px, 8vw, 112px);
@@ -46,9 +46,9 @@ img { display: block; max-width: 100%; }
 .serif { font-family: var(--serif); font-weight: 400; }
 
 /* Типографика */
-.h1 { margin: 0; font: 400 clamp(40px, 5vw, 64px)/1.1 var(--serif); }
-.h2 { margin: 0; font: 400 clamp(32px, 3.8vw, 48px)/1.15 var(--serif); text-wrap: pretty; }
-.h2-form { margin: 0; font: 400 clamp(30px, 3.6vw, 46px)/1.18 var(--serif); color: #fff; text-wrap: pretty; }
+.h1 { margin: 0; font: 300 clamp(38px, 4.6vw, 60px)/1.1 var(--serif); letter-spacing: -.02em; }
+.h2 { margin: 0; font: 400 clamp(30px, 3.2vw, 42px)/1.15 var(--serif); letter-spacing: -.015em; text-wrap: balance; }
+.h2-form { margin: 0; font: 300 clamp(28px, 3.2vw, 42px)/1.2 var(--serif); letter-spacing: -.015em; color: #fff; text-wrap: balance; }
 .lead { margin: 0; font: 400 17px/1.55 var(--sans); color: var(--ink-2); text-wrap: pretty; }
 .big-num { font: 400 clamp(36px, 3.6vw, 46px)/1 var(--serif); }
 .eyebrow { font: 500 16px/1.4 var(--sans); color: var(--gold-dark); }
