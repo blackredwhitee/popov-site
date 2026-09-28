@@ -1,0 +1,23 @@
+.form { position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+.field { display: flex; flex-direction: column; gap: 8px; font: 400 14px/1 var(--sans); color: var(--on-navy); }
+.full { grid-column: 1 / -1; }
+.input {
+  height: 54px; padding: 0 16px; background: transparent; border: 1px solid rgba(255,255,255,.3);
+  color: #fff; font-size: 16px; outline: none; border-radius: 0; width: 100%;
+}
+.input:focus { border-color: var(--gold); }
+select.input { padding: 0 12px; background: var(--navy); }
+textarea.input { height: auto; padding: 14px 16px; line-height: 1.5; resize: vertical; }
+.bad, .bad:focus { border-color: var(--error); }
+.err { font: 400 13px/1.4 var(--sans); color: var(--error); }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { padding: 12px 16px; min-height: 44px; border: 1px solid rgba(255,255,255,.3); background: transparent; color: #fff; font: 400 15px/1 var(--sans); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--gold); border-color: var(--gold); color: var(--navy); }
+.consent { display: flex; gap: 12px; align-items: flex-start; font: 400 14px/1.5 var(--sans); color: var(--on-navy); cursor: pointer; }
+.consent input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--gold); flex: none; }
+.consent a { color: var(--gold); border-bottom: 1px solid rgba(200,161,90,.5); }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.submit { grid-column: 1 / -1; justify-self: start; padding: 20px 40px; }
+.submit:disabled { opacity: .7; cursor: default; }
+.net { grid-column: 1 / -1; margin: 0; font: 400 14px/1.5 var(--sans); color: var(--error); }
+.net a { color: var(--error); border-bottom: 1px solid currentColor; }

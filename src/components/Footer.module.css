@@ -1,0 +1,19 @@
+.footer { background: var(--navy-deep); color: var(--on-navy-2); }
+.inner { max-width: 1280px; margin: 0 auto; padding: 48px var(--pad-x); display: flex; flex-wrap: wrap; gap: 32px 64px; justify-content: space-between; }
+.brand { display: flex; flex-direction: column; gap: 10px; }
+.brand b { font: 500 22px/1 var(--serif); color: #fff; }
+.brand span { font: 400 14px/1.5 var(--sans); }
+.menu { display: flex; flex-wrap: wrap; gap: 12px 32px; font: 400 15px/1.4 var(--sans); }
+.menu a, .contacts a { color: var(--on-navy-2); }
+.menu a:hover, .contacts a:hover { color: var(--gold); }
+.contacts { display: flex; flex-direction: column; gap: 8px; font: 400 15px/1.4 var(--sans); }
+.contacts a:first-child { color: #fff; }
+.bottom { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 8px 32px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); font: 400 13px/1.5 var(--sans); color: var(--on-navy-3); }
+.bottom a { color: var(--on-navy-3); }
+@media (max-width: 899px) { .inner { padding-bottom: 110px; } }
+
+.cookie { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 35; max-width: 520px; margin-left: auto; background: #fff; border: 1px solid var(--line); padding: 18px 20px; display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+.cookie p { flex: 1 1 260px; margin: 0; font: 400 14px/1.5 var(--sans); color: var(--ink-2); }
+.cookie p a { color: var(--navy); border-bottom: 1px solid var(--gold); }
+.cookie button { padding: 12px 22px; min-height: 44px; font-size: 14px; }
+@media (max-width: 899px) { .cookie { bottom: 96px; } }

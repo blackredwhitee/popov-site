@@ -1,0 +1,7 @@
+.overlay { position: fixed; inset: 0; z-index: 100; background: rgba(15,29,48,.72); display: flex; align-items: center; justify-content: center; padding: 20px; }
+.panel { position: relative; width: 100%; max-width: 760px; max-height: calc(100vh - 40px); max-height: calc(100dvh - 40px); overflow: auto; background: var(--navy); padding: clamp(24px, 4vw, 48px); }
+.close { position: absolute; top: 12px; right: 12px; width: 44px; height: 44px; background: none; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; padding-right: 40px; }
+.title { margin: 0; font: 400 clamp(26px, 3vw, 34px)/1.2 var(--serif); color: #fff; }
+.sub { margin: 0; font: 400 16px/1.5 var(--sans); color: var(--on-navy); }
+.sub a { color: var(--gold); }
