@@ -63,7 +63,7 @@ export default async function ArticlePage({ params }: Props) {
           <Share title={p.t} />
           <div className={s.author}>
             <div className={s.ava}><Pic name="avatar" widths={[192]} sizes="72px" alt="" /></div>
-            <div><b>Михаил Попов</b><span>Внешний директор по развитию. 25+ лет в управлении, 6 советов директоров.</span></div>
+            <div><b>Михаил Попов</b><span>Предприниматель, основатель Talkbank и EasyFinance. 25+ лет в управлении, 6 советов директоров.</span></div>
           </div>
           <div className={s.artCta}>
             <span>Хотите разобрать свой бизнес? Запишитесь на диагностику</span>

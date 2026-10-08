@@ -8,7 +8,7 @@ export default function Footer() {
     <>
       <footer className={s.footer}>
         <div className={s.inner}>
-          <div className={s.brand}><b>Михаил Попов</b><span>Внешний директор по развитию</span></div>
+          <div className={s.brand}><b>Михаил Попов</b><span>Предприниматель в финтехе и инновациях</span></div>
           <nav className={s.menu} aria-label="Меню в подвале">
             <Link href="/#services">Услуги</Link><Link href="/#how">Как я работаю</Link><Link href="/cases/">Кейсы</Link>
             <Link href="/#about">Обо мне</Link><Link href="/blog/">Блог</Link><Link href="/media/">Публикации</Link>

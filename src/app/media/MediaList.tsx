@@ -5,7 +5,7 @@ import s from "../inner.module.css";
 
 const ALL = "Все";
 const PER_PAGE = 20;
-const years = [...new Set(PUBLICATIONS.map((p) => p.date.slice(0, 4)))];
+const years = [...new Set(PUBLICATIONS.map((p) => p.date.slice(0, 4)).filter(Boolean))];
 const outlets = [...new Set(PUBLICATIONS.map((p) => p.pub))].sort((a, b) => a.localeCompare(b, "ru"));
 const types = [...new Set(PUBLICATIONS.map((p) => p.type))];
 

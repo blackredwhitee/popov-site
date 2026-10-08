@@ -2259,6 +2259,15 @@
 "home": true
 },
 {
+"date": "2019-11-21",
+"pub": "Bankir.ru",
+"tier": "Tier 1",
+"title": "Михаил Попов (TalkBank): «Мы выполняем свои обязательства, а это на рынке ценится»",
+"url": "https://bankir.ru/publikacii/20191121/mikhail-popov-talkbank-my-vypolnyaem-svoi-obyazatelstva-a-eto-na-rynke-tsenitsya-10009821/",
+"type": "Интервью",
+"home": false
+},
+{
 "date": "2019-11-10",
 "pub": "ПЛАС",
 "tier": "Tier 2",
@@ -2351,23 +2360,104 @@
 "home": true
 },
 {
-"date": "2017-01-01",
-"pub": "Ведомости",
+"date": "2017-05-14",
+"pub": "Forbes",
 "tier": "ТОП СМИ",
-"title": "Talkbank стал одним из победителей международного конкурса Seedstars",
-"url": "",
-"type": "Материал о Михаиле",
-"home": false,
-"approx": true
+"title": "Как искусственный интеллект проникает в финтех: от чат-ботов к персональным ассистентам",
+"url": "https://www.forbes.ru/tehnologii/340187-kak-iskusstvennyy-intellekt-pronikaet-finteh-ot-chat-botov-k-personalnym",
+"type": "Упоминание",
+"home": false
 },
 {
-"date": "2016-01-01",
+"date": "2017-05-02",
+"pub": "Ведомости",
+"tier": "ТОП СМИ",
+"title": "Московский стартап Talkbank стал одним из победителей международного конкурса стартапов Seedstars",
+"url": "https://www.vedomosti.ru/technology/articles/2017/05/02/688239-startap-talkbank",
+"type": "Материал о Михаиле",
+"home": false
+},
+{
+"date": "2017-05-02",
+"pub": "Rusbase",
+"tier": "Tier 1",
+"title": "Российский стартап Talkbank стал финалистом мирового этапа конкурса Seedstars",
+"url": "https://rb.ru/news/talkbank-winner",
+"type": "Материал о Михаиле",
+"home": false
+},
+{
+"date": "2017-01-01",
+"approx": true,
+"pub": "SWIFT",
+"tier": "Tier 1",
+"title": "OZ Forensics, Scorista and TalkBank win Innotribe’s 2017 Startup Challenge for Russia",
+"url": "https://www.swift.com/news-events/press-releases/oz-forensics_scorista-and-talkbank-win-innotribe_s-2017-startup-challenge-for-russia",
+"type": "Материал о Михаиле",
+"home": false
+},
+{
+"date": "2016-12-16",
 "pub": "TechCrunch",
 "tier": "Tier 1",
 "title": "TalkBank lets you chat with your bank",
-"url": "",
+"url": "https://techcrunch.com/2016/12/16/talkbank-lets-you-chat-with-your-bank",
 "type": "Материал о Михаиле",
-"home": false,
-"approx": true
+"home": false
+},
+{
+"date": "2016-11-26",
+"pub": "РБК",
+"tier": "ТОП СМИ",
+"title": "Как работает банк в Telegram",
+"url": "https://www.rbc.ru/finances/26/11/2016/583840559a7947a522e8c434",
+"type": "Материал о Михаиле",
+"home": false
+},
+{
+"date": "2016-05-24",
+"pub": "Банки.ру",
+"tier": "Tier 1",
+"title": "Появился первый в мире Telegram-банк",
+"url": "https://www.banki.ru/news/lenta/?id=8936405",
+"type": "Материал о Михаиле",
+"home": false
+},
+{
+"date": "2016-01-01",
+"approx": true,
+"pub": "АРБ",
+"tier": "Tier 2",
+"title": "TalkBank.io — первый в мире Telegram-банк появился в России",
+"url": "https://arb.ru/b2b/news/talkbank_io_pervyy_v_mire_telegram_bank_poyavilsya_v_rossii-10014527",
+"type": "Материал о Михаиле",
+"home": false
+},
+{
+"date": "",
+"pub": "ПРО Бизнес ТВ",
+"tier": "Tier 2",
+"title": "[Эфир на ПРО Бизнес ТВ — название уточнить]",
+"url": "http://www.probusinesstv.ru/programs/109/19989",
+"type": "Интервью",
+"home": false
+},
+{
+"date": "",
+"pub": "ЭкспоКлуб",
+"tier": "Tier 2",
+"title": "От роботов до медицины: что продемонстрируют российские компании в Японии на выставке CEATEC Japan",
+"url": "https://www.expoclub.ru/news/ot_robotov_do_meditsiny_chto_prodemonstriruyut_rossiyskie_kompanii_v_yaponii_na_vystavke_ceatec_japa/",
+"type": "Упоминание",
+"home": false
+},
+{
+"date": "",
+"pub": "Firrma",
+"tier": "Tier 2",
+"title": "[Новость на Firrma — название уточнить]",
+"url": "http://firrma.ru/data/news/79813",
+"type": "Материал о Михаиле",
+"home": false
 }
 ]

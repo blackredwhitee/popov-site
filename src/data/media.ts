@@ -39,5 +39,6 @@ export const FEATURED = FEATURED_ORDER.flatMap((f) => {
   return p ? [{ ...p, pub: f.pub, title: f.title, type: f.type }] : [];
 });
 
+/** Дата публикации; пустая — дата неизвестна (ссылка из пресс-кита, страница недоступна). */
 export const fmtDate = (p: Publication) =>
-  p.approx ? p.date.slice(0, 4) : p.date.split("-").reverse().join(".");
+  !p.date ? "—" : p.approx ? p.date.slice(0, 4) : p.date.split("-").reverse().join(".");

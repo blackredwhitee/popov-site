@@ -5,7 +5,7 @@ import Note from "@/components/Note";
 import Pic from "@/components/Pic";
 import { TgIcon } from "@/components/icons";
 import {
-  ABOUT, AWARDS, CAREER_CASES, FAQ, FIT, HERO_STATS, NOT_FIT, PAINS, QUOTES, SERVICES, STEPS, TIMELINE,
+  ABOUT, AWARDS, CAREER_CASES, FAQ, FIT, HERO_STATS, NOT_FIT, PAINS, QUOTES, SERVICES, STEPS,
 } from "@/data/home";
 import { COMPANY_LOGOS, OUTLET_LOGOS, PRESS_LOGOS } from "@/data/logos";
 import { FEATURED, fmtDate, MEDIA_STATS } from "@/data/media";
@@ -15,8 +15,8 @@ import { Faq, MethodScheme } from "./_home/Interactive";
 import s from "./home.module.css";
 
 export const metadata = meta({
-  title: "Михаил Попов — внешний директор по развитию",
-  description: "Нахожу, где бизнес теряет деньги, и остаюсь, пока это не превратится в прибыль. 25+ лет в управлении: «Магнит», ГК ПИК, BORK. Фикс + процент от результата.",
+  title: "Михаил Попов — предприниматель, основатель Talkbank и EasyFinance",
+  description: "Михаил Попов — предприниматель в финтехе и инновациях, основатель Talkbank и EasyFinance. Нахожу, где бизнес теряет деньги, и помогаю собственнику превратить потери в прибыль.",
   path: "/",
 });
 
@@ -27,9 +27,9 @@ export default function Home() {
   return (
     <main>
       <JsonLd data={{
-        "@context": "https://schema.org", "@type": "Person", name: "Михаил Попов", jobTitle: "Внешний директор по развитию",
+        "@context": "https://schema.org", "@type": "Person", name: "Михаил Попов", jobTitle: "Предприниматель, основатель и CEO Talkbank",
         url: SITE_URL, image: SITE_URL + "/img/portrait-840.jpg", sameAs: [TELEGRAM, FORBES],
-        worksFor: { "@type": "Organization", name: "Михаил Попов — внешний директор по развитию", url: SITE_URL },
+        worksFor: { "@type": "Organization", name: "Talkbank" },
       }} />
       <JsonLd data={{
         "@context": "https://schema.org", "@type": "FAQPage",
@@ -39,9 +39,9 @@ export default function Home() {
       {/* Первый экран */}
       <section id="top" className={`container ${s.hero}`}>
         <div className={s.heroText}>
-          <p className={s.byline}>Михаил Попов <span>—</span> внешний директор по развитию</p>
-          <h1 className={s.h1}>Нахожу, где ваш бизнес теряет деньги, — и&nbsp;<em>остаюсь</em>, пока это не&nbsp;превратится в&nbsp;прибыль</h1>
-          <p className={s.heroLead}>Захожу в компанию, перестраиваю процессы вместе с&nbsp;вашей командой и довожу до роста прибыли. Работаю за&nbsp;фикс и процент от&nbsp;результата.</p>
+          <p className={s.byline}>Михаил Попов <span>—</span> предприниматель в финтехе и инновациях, основатель Talkbank и EasyFinance</p>
+          <h1 className={s.h1}>Нахожу, где ваш бизнес теряет деньги, — и&nbsp;<em>помогаю</em> собственнику превратить потери в&nbsp;прибыль</h1>
+          <p className={s.heroLead}>Захожу в компанию, перестраиваю процессы вместе с&nbsp;вашей командой и довожу до роста прибыли.</p>
           <div className={s.heroCtas}>
             <a href="#form" className="btn btn-primary">Обсудить задачу</a>
             <a href="#cases" className="btn btn-outline">Посмотреть кейсы</a>
@@ -94,12 +94,11 @@ export default function Home() {
       {/* Цитата с фото */}
       <section className={`container ${s.photoQuote}`} data-reveal>
         <figure className={s.pqPhoto}>
-          <Pic name="gallery-1" widths={[720, 1100]} sizes="(max-width: 900px) 90vw, 560px" alt="Михаил Попов в офисе Talkbank" />
-          <figcaption>В офисе Talkbank</figcaption>
+          <Pic name="about" widths={[520, 1040]} sizes="(max-width: 900px) 90vw, 560px" alt="Михаил Попов" />
         </figure>
         <figure className={s.pqText}>
           <blockquote>{QUOTES.afterPains}</blockquote>
-          <figcaption>— из интервью, 2020</figcaption>
+          <figcaption>— Михаил Попов</figcaption>
         </figure>
       </section>
 
@@ -108,7 +107,7 @@ export default function Home() {
         <div className="container sec" data-reveal>
           <div className={s.howHead}>
             <h2 className="h2" style={{ color: "#fff" }}>Как я работаю</h2>
-            <p>Я не пишу отчёт и не ухожу. Работаю внутри компании вместе с&nbsp;вашей командой, пока изменения не появятся в&nbsp;отчётности.</p>
+            <p>Я работаю с собственником и его командой внутри компании по авторской методике «7П+1». Она позволяет получить устойчивый рост выручки и прибыли и вывести компанию на более высокий уровень развития.</p>
           </div>
           <ol className={s.steps}>
             {STEPS.map((x, i) => (
@@ -127,7 +126,7 @@ export default function Home() {
       <section id="services" className="container sec" data-reveal>
         <div className={s.servicesHead}>
           <h2 className="h2">Услуги</h2>
-          <p className="lead">Большинство клиентов начинают с диагностики — через 2–4 недели понятно, где деньги и сколько их.</p>
+          <p className="lead">Большинство клиентов начинают с диагностики — через 2–4 недели понятно, где компания теряет деньги и в каком приоритете строить работу по исправлению ситуации.</p>
         </div>
         <div className={s.services}>
           {SERVICES.map((v, i) => (
@@ -183,7 +182,7 @@ export default function Home() {
             <div className={s.paras}>
               {ABOUT.filter(shown).map((p) => <p key={p.slice(0, 20)}>{p}</p>)}
             </div>
-            <Note>Черновик на согласование (Дополнение №1, п. 2.1). Уточнить: 20 или 25 тыс. сотрудников; можно ли упоминать брата Александра.</Note>
+            
             <p className={s.boards}><b>6 советов директоров</b> с 2001 года. Там моя работа — защищать интересы акционеров и контролировать менеджмент.</p>
             {RESUME_PDF
               ? <a href={asset(RESUME_PDF)} download className="btn btn-outline" style={{ alignSelf: "flex-start" }}>Скачать резюме (PDF)</a>
@@ -196,18 +195,9 @@ export default function Home() {
           </div>
           <div className={s.path}>
             <h3 className={s.pathTitle}>Путь</h3>
-            <ol className={s.timeline}>
-              {TIMELINE.filter((t) => shown(t.co + t.f)).map((t) => <li key={t.co + t.f}><b>{t.co}</b><span>{t.f}</span></li>)}
-            </ol>
           </div>
         </div>
       </section>
-
-      {/* Фото команды */}
-      <figure className={s.teamPhoto}>
-        <Pic name="team" widths={[1600, 2400]} sizes="100vw" alt="Михаил Попов с командой Talkbank" />
-        <figcaption className="container">С командой Talkbank. Проектных менеджеров мы растили из службы поддержки.</figcaption>
-      </figure>
 
       {/* Акселератор */}
       <section className={`container sec ${s.accel}`} data-reveal>
@@ -251,7 +241,7 @@ export default function Home() {
               <h3 className={s.colTitle}>Награды и рейтинги</h3>
               <ul className={s.awards}>
                 {AWARDS.map((w) => (
-                  <li key={w.n}><b>{w.n}</b><span>{w.d}{w.y && <em> · {w.y}</em>}</span></li>
+                  <li key={w.n}>{w.url ? <a href={w.url} target="_blank" rel="noopener"><b>{w.n} ↗</b></a> : <b>{w.n}</b>}<span>{w.d}{w.y && <em> · {w.y}</em>}</span></li>
                 ))}
               </ul>
             </div>

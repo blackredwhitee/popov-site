@@ -46,7 +46,7 @@ export function MethodScheme({ note }: { note?: React.ReactNode }) {
     <>
       <div className={s.methodText}>
         <h2 className="h2">Методология «7П+1»</h2>
-        <p className="lead">Проверяю бизнес по семи направлениям и цифровым инструментам управления. Так потери находятся системно, а не по интуиции.</p>
+        <p className="lead">Проверяю бизнес по семи направлениям и личной эффективности собственника. Так потери находятся системно, а не по интуиции.</p>
         <div className={s.methodPanel} aria-live="polite">
           <div key={node} className={s.panelIn}>
             <b>{act.t}</b>
@@ -64,8 +64,8 @@ export function MethodScheme({ note }: { note?: React.ReactNode }) {
           <button key={m.t} type="button" className={s.node} style={{ left: POS[i][0], top: POS[i][1], ["--i" as string]: i }}
             aria-pressed={node === i} onClick={() => pick(i)} onMouseEnter={hover(i)}>{m.t}</button>
         ))}
-        <button type="button" className={s.center} aria-pressed={node === 7} onClick={() => pick(7)} onMouseEnter={hover(7)} aria-label="+1 — цифровые инструменты">
-          <b>+1</b><span>цифровые инструменты</span>
+        <button type="button" className={s.center} aria-pressed={node === 7} onClick={() => pick(7)} onMouseEnter={hover(7)} aria-label="+1 — личная эффективность">
+          <b>+1</b><span>личная эффективность</span>
         </button>
       </div>
     </>
