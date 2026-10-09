@@ -12,6 +12,7 @@
 /* Карточки кейсов */
 .caseGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 20px; }
 .caseCard { background: var(--white); border: 1px solid var(--line); padding: 28px; display: flex; flex-direction: column; gap: 16px; color: var(--navy); min-height: 320px; }
+.caseCard .icon { display: inline-flex; color: var(--navy); margin-bottom: 4px; }
 .caseCard .meta { font: 400 14px/1.4 var(--sans); color: var(--gold-dark); }
 .caseCard .title { font: 400 23px/1.3 var(--serif); text-wrap: pretty; }
 .caseCard .foot { margin-top: auto; display: flex; flex-direction: column; gap: 8px; padding-top: 20px; border-top: 1px solid var(--line); }

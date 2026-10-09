@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { CASE_INDUSTRIES as INDUSTRIES, CASE_TASKS } from "@/data/common";
 import { CASES } from "@/data/cases";
+import CaseIcon from "@/components/CaseIcon";
+import { shown } from "@/lib/config";
 import s from "../inner.module.css";
 
 const ALL = "Все";
@@ -28,7 +30,7 @@ export default function CasesList({ note }: { note?: React.ReactNode }) {
     history.replaceState(null, "", location.pathname + (qs ? `?${qs}` : ""));
   }
 
-  const list = CASES.filter((c) => (ind === ALL || c.ind === ind) && (task === ALL || c.task === task));
+  const list = CASES.filter((c) => shown(c.title + (c.num ?? "") + c.numLabel) && (ind === ALL || c.ind === ind) && (task === ALL || c.task === task));
 
   return (
     <>
@@ -50,9 +52,10 @@ export default function CasesList({ note }: { note?: React.ReactNode }) {
           {list.map((c) => {
             const inner = (
               <>
+                {c.icon && <span className={s.icon}><CaseIcon name={c.icon} /></span>}
                 <span className={s.meta}>{c.meta}</span>
                 <span className={s.title}>{c.title}</span>
-                <div className={s.foot}><b>{c.num}</b><span className={s.sub}>{c.numLabel}</span></div>
+                <div className={s.foot}>{c.num && <b>{c.num}</b>}<span className={s.sub}>{c.numLabel}</span></div>
                 <div className={s.tags}>
                   <span>{c.ind} · {c.task}</span>
                   {c.slug && <span className="link link-sm link-gold">Разбор кейса</span>}

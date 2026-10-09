@@ -3,6 +3,8 @@ import LeadForm from "@/components/LeadForm";
 import LogoMark from "@/components/LogoMark";
 import Note from "@/components/Note";
 import Pic from "@/components/Pic";
+import CaseIcon from "@/components/CaseIcon";
+import { CASES } from "@/data/cases";
 import { TgIcon } from "@/components/icons";
 import {
   ABOUT, AWARDS, CAREER_CASES, FAQ, FIT, HERO_STATS, NOT_FIT, PAINS, QUOTES, SERVICES, STEPS,
@@ -166,6 +168,18 @@ export default function Home() {
             <span className="link link-gold">Разбор кейса</span>
           </div>
         </Link>
+        <div className={s.practice}>
+          <span className={s.careerLabel}>Проекты</span>
+          <ul>
+            {CASES.filter((c) => c.icon).map((c) => (
+              <li key={c.title}>
+                <span className={s.pIcon}>{c.icon && <CaseIcon name={c.icon} size={30} />}</span>
+                <b>{c.title}</b>
+                <span className={s.pText}>{c.num && <strong>{c.num} </strong>}{c.numLabel}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
         <div className={s.career}>
           <span className={s.careerLabel}>Из прошлой карьеры</span>
           {CAREER_CASES.map((c) => (
