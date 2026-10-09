@@ -193,9 +193,6 @@ export default function Home() {
               <Pic name="gallery-5" widths={[720, 1100]} sizes="(max-width: 900px) 90vw, 520px" alt="Михаил Попов" />
             </figure>
           </div>
-          <div className={s.path}>
-            <h3 className={s.pathTitle}>Путь</h3>
-          </div>
         </div>
       </section>
 
