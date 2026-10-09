@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TELEGRAM } from "@/lib/config";
+import { TELEGRAM_CHANNEL as TELEGRAM } from "@/lib/config";
 import { meta } from "@/lib/seo";
 import s from "../inner.module.css";
 import Title from "./Title";

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { EMAIL, FORBES, REQUISITES, TELEGRAM } from "@/lib/config";
+import { EMAIL, FORBES, REQUISITES, TELEGRAM_CHANNEL } from "@/lib/config";
 import CookieBanner from "./CookieBanner";
 import s from "./Footer.module.css";
 
@@ -14,7 +14,7 @@ export default function Footer() {
             <Link href="/#about">Обо мне</Link><Link href="/blog/">Блог</Link><Link href="/media/">Публикации</Link>
           </nav>
           <div className={s.contacts}>
-            <a href={TELEGRAM} target="_blank" rel="noopener">Telegram-канал</a>
+            <a href={TELEGRAM_CHANNEL} target="_blank" rel="noopener">Telegram-канал</a>
             <a href={FORBES} target="_blank" rel="noopener">Профиль Forbes</a>
             {EMAIL ? <a href={`mailto:${EMAIL}`}>{EMAIL}</a> : <span>[e-mail]</span>}
           </div>

@@ -2,6 +2,8 @@
 export const SITE_URL = "https://blackredwhitee.github.io/popov-site"; // TODO: финальный домен (ТЗ §10)
 export const SITE_NAME = "Михаил Попов";
 export const TELEGRAM = "https://t.me/popovmb";
+/** Telegram-канал Михаила (для кнопок «Telegram-канал» и «Подписаться»). */
+export const TELEGRAM_CHANNEL = "https://t.me/forbesnapishet";
 export const TELEGRAM_HANDLE = "@popovmb";
 export const FORBES = "https://www.forbes.ru/profile/361969";
 export const EMAIL = ""; // TODO: e-mail для связи

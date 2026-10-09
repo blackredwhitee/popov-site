@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { RUBRICS } from "@/data/common";
 import { POSTS, postHref } from "@/data/blog";
+import { TELEGRAM_CHANNEL } from "@/lib/config";
 import s from "../inner.module.css";
 
 const ALL = "Все";
@@ -24,6 +25,18 @@ export default function BlogList({ note }: { note?: React.ReactNode }) {
   const list = POSTS.filter((p) => rub === ALL || p.rub === rub);
   const [first, ...rest] = list;
 
+  if (!POSTS.length) {
+    return (
+      <section className={`container ${s.list}`}>
+        <div className={s.empty}>
+          <b>Статьи скоро появятся</b>
+          <span>Пока новые разборы и заметки Михаил публикует в Telegram-канале.</span>
+          <a href={TELEGRAM_CHANNEL} className="link link-sm" target="_blank" rel="noopener">Читать канал</a>
+        </div>
+        {note}
+      </section>
+    );
+  }
   return (
     <>
       <div className="container">

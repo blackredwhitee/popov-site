@@ -1,6 +1,5 @@
-import Note from "@/components/Note";
 import { TgIcon } from "@/components/icons";
-import { TELEGRAM } from "@/lib/config";
+import { TELEGRAM_CHANNEL as TELEGRAM } from "@/lib/config";
 import { Crumbs, meta } from "@/lib/seo";
 import s from "../inner.module.css";
 import BlogList from "./BlogList";
@@ -24,7 +23,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-      <BlogList note={<Note>Стартовые статьи — по Дополнению №1 (п. 6), тексты — черновики из «Банка контента», утверждает Михаил. Даты и время чтения условные. Подкаст UP business — реальный материал из Приложения А.</Note>} />
+      <BlogList />
       <section className="band-navy">
         <div className={`container ${s.subscribe}`}>
           <div>
