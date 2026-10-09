@@ -1,14 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Golos_Text, Literata } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import LeadModal from "@/components/LeadModal";
 import Reveal from "@/components/Reveal";
 import { SITE_NAME, SITE_URL } from "@/lib/config";
+// Шрифты лежат в npm-пакетах — сборка не зависит от Google Fonts
+import "@fontsource/literata/300.css";
+import "@fontsource/literata/400.css";
+import "@fontsource/literata/500.css";
+import "@fontsource/literata/300-italic.css";
+import "@fontsource/literata/400-italic.css";
+import "@fontsource/golos-text/400.css";
+import "@fontsource/golos-text/500.css";
+import "@fontsource/golos-text/600.css";
 import "./globals.css";
 
-const serif = Literata({ subsets: ["cyrillic", "latin"], weight: ["300", "400", "500"], style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
-const golos = Golos_Text({ subsets: ["cyrillic", "latin"], weight: ["400", "500", "600"], variable: "--font-golos", display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL + "/"),
@@ -20,7 +26,7 @@ export const viewport: Viewport = { themeColor: "#F5F3EE" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="ru" suppressHydrationWarning className={`${serif.variable} ${golos.variable}`}>
+    <html lang="ru" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
       </head>

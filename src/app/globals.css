@@ -24,8 +24,8 @@
   --btn-hover: var(--navy-hover);
   --btn-text: #fff;
   --num: var(--navy);
-  --serif: var(--font-serif), Georgia, serif;
-  --sans: var(--font-golos), system-ui, sans-serif;
+  --serif: "Literata", Georgia, serif;
+  --sans: "Golos Text", system-ui, sans-serif;
   --pad-x: clamp(20px, 5vw, 64px);
   --sec-y: clamp(64px, 8vw, 112px);
 }
