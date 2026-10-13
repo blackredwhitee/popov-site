@@ -52,3 +52,37 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  # Боевая выкладка на хостинг reg.ru (mbpopov.ru) по SFTP.
+  # Сработает, когда в репозитории заданы секреты REGRU_SFTP_USER и REGRU_SFTP_PASSWORD.
+  deploy-regru:
+    runs-on: ubuntu-latest
+    env:
+      HAS_CREDS: ${{ secrets.REGRU_SFTP_PASSWORD != '' }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.HAS_CREDS == 'true'
+
+      - uses: actions/setup-node@v4
+        if: env.HAS_CREDS == 'true'
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Build for mbpopov.ru (без под-пути /popov-site/)
+        if: env.HAS_CREDS == 'true'
+        env:
+          NEXT_PUBLIC_HIDE_NOTES: "1"
+          NEXT_PUBLIC_SITE_URL: "https://mbpopov.ru"
+        run: npm ci && npm run build
+
+      - name: Upload to reg.ru by SFTP
+        if: env.HAS_CREDS == 'true'
+        env:
+          SFTP_USER: ${{ secrets.REGRU_SFTP_USER }}
+          SFTP_PASSWORD: ${{ secrets.REGRU_SFTP_PASSWORD }}
+          SFTP_HOST: server111.hosting.reg.ru
+          SFTP_DIR: www/mbpopov.ru
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq lftp
+          lftp -u "$SFTP_USER","$SFTP_PASSWORD" "sftp://$SFTP_HOST" -e "set sftp:auto-confirm yes; mirror -R --delete --verbose=1 out $SFTP_DIR; bye"

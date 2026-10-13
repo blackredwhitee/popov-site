@@ -1,5 +1,6 @@
 /** Глобальные настройки сайта. Значения с TODO подтверждает заказчик. */
-export const SITE_URL = "https://blackredwhitee.github.io/popov-site"; // TODO: финальный домен (ТЗ §10)
+/** Адрес сайта. Для боевой выкладки на хостинг reg.ru — https://mbpopov.ru (задаётся в сборке). */
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://blackredwhitee.github.io/popov-site";
 export const SITE_NAME = "Михаил Попов";
 export const TELEGRAM = "https://t.me/popovmb";
 /** Telegram-канал Михаила (для кнопок «Telegram-канал» и «Подписаться»). */
